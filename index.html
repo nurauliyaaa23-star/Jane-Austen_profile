@@ -3,49 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Penulis Sastra Favorit - Jane Austen</title>
+    <title>Formulir Pendaftaran Komunitas Teknologi</title>
 </head>
 <body>
+    <h1>Formulir Pendaftaran Komunitas Teknologi</h1>
 
-    <h1>Jane Austen</h1>
+    <form action="submit.html" method="post">
+        <fieldset>
+            <legend>Data Pribadi</legend>
 
-    <p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Jane_Austen.jpg" alt= Jane Austen" width="200">
-        <br>
-        
-    </p>
+            <label for="nama">Nama Lengkap:</label><br>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required><br><br>
 
-    <h2>Biografi Singkat</h2>
+            <label for="email">Alamat Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="contoh@email.com" required><br><br>
 
-    <p>Jane Austen lahir pada 16 Desember 1775 di Steventon, Hampshire, Inggris. Dia adalah seorang novelis terkenal yang karya-karyanya banyak menggambarkan kehidupan sosial dan peran perempuan di Inggris pada abad ke-18. Sejak muda, Jane sudah menunjukkan minat besar terhadap menulis dan membaca, yang kemudian membawanya menjadi salah satu penulis klasik paling berpengaruh di dunia.
-        
-    </p>
+            <label for="password">Kata Sandi:</label><br>
+            <input type="password" id="password" name="password" placeholder="Masukkan kata sandi" required><br><br>
 
-    
-    </p>
+            <label for="usia">Usia:</label><br>
+            <input type="number" id="usia" name="usia" min="10" max="100" required><br><br>
 
-    <h2>Karya-Karya Terkenal </h2>
+            <label for="tgl_lahir">Tanggal Lahir:</label><br>
+            <input type="date" id="tgl_lahir" name="tgl_lahir" required><br><br>
 
-    <p>
-        Jane Austen menulis beberapa novel yang hingga kini dianggap sebagai karya klasik dalam sastra Inggris. Beberapa karya terkenalnya meliputi: 
-    </p>
+            <label>Jenis Kelamin:</label><br>
+            <input type="radio" id="laki" name="gender" value="Laki-laki" required>
+            <label for="laki">Laki-laki</label>
+            <input type="radio" id="perempuan" name="gender" value="Perempuan">
+            <label for="perempuan">Perempuan</label><br><br>
 
-    <ol>
-        <li>Pride and Prejudice (1813)</li>
-        <li>Sense and Sensibility (1811)</li>
-        <li>Emma (1815)</li>
-        <li>Persuasion (1817)</li>
-        <li>Northanger Abbey (1818)</li>
-        <li>Mansfield Park (1814)</li>
-    </ol>
+            <label>Minat:</label><br>
+            <input type="checkbox" id="ai" name="minat" value="AI">
+            <label for="ai">AI</label>
+            <input type="checkbox" id="web" name="minat" value="Web">
+            <label for="web">Web</label>
+            <input type="checkbox" id="iot" name="minat" value="IoT">
+            <label for="iot">IoT</label>
+            <input type="checkbox" id="game" name="minat" value="Game">
+            <label for="game">Game</label><br><br>
 
-    <h2>Fakta Menarik</h2>
+            <label for="telp">Nomor Telepon:</label><br>
+            <input type="tel" id="telp" name="telp" pattern="[0-9]{10,13}" placeholder="081234567890" required><br><br>
 
-    <ul>
-        <li>Huruf 'K' di J.K. Rowling adalah singkatan dari Kathleen, nama nenek dari pihak ayahnya.</li>
-        <li>Dia menulis novel kriminal dengan nama samaran Robert Galbraith.</li>
-        <li>Rowling adalah orang pertama yang menjadi miliarder (dolar AS) hanya dari menulis buku.</li>
-    </ul>
+            <label for="url">Link Portofolio:</label><br>
+            <input type="url" id="url" name="url" placeholder="https://contoh.com" autocomplete="off"><br><br>
 
+            <label for="foto">Upload Foto Profil:</label><br>
+            <input type="file" id="foto" name="foto" accept="image/*"><br><br>
+        </fieldset>
+
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
